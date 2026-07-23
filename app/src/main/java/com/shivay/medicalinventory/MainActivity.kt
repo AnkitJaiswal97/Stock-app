@@ -1,5 +1,5 @@
 package com.shivay.medicalinventory
-
+import androidx.compose.material3.ExperimentalMaterial3Api
 import android.content.Context
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -32,6 +32,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun InventoryApp(context: Context) {
     var medicines by remember { mutableStateOf(load(context)) }
